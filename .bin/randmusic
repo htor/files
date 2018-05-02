@@ -3,7 +3,7 @@
 
 set -e
 
-target_directory=~/space/music
+target_directory=/Volumes/space/music
 num_tracks=10
 playlist=$(mktemp)
 mv $playlist $playlist.m3u
