@@ -1,6 +1,7 @@
 shopt -s extglob nullglob dotglob
 alias ls='ls -Gh'
 alias ll='ls -l'
+alias la='ll -a'
 alias grep='grep --colour=auto'
 alias scp='scp -p'
 alias su='sudo su -l'
