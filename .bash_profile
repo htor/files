@@ -7,9 +7,8 @@ alias grep='grep --colour=auto'
 alias scp='scp -p'
 alias su='sudo su -l'
 EDITOR="vim"
-PATH="$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
+PATH=".:$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
 PS1='\w \$ '
 HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
 HISTFILESIZE=100000
-PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
