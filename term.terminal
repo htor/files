@@ -16,6 +16,8 @@
 	<false/>
 	<key>BellBounce</key>
 	<false/>
+	<key>CommandString</key>
+	<string>/usr/local/bin/bash</string>
 	<key>DisableANSIColor</key>
 	<false/>
 	<key>Font</key>
@@ -35,6 +37,8 @@
 	<real>1</real>
 	<key>ProfileCurrentVersion</key>
 	<real>2.0499999999999998</real>
+	<key>RunCommandAsShell</key>
+	<true/>
 	<key>SetLanguageEnvironmentVariables</key>
 	<true/>
 	<key>ShowActiveProcessArgumentsInTabTitle</key>
@@ -76,11 +80,11 @@
 	<key>WindowTitle</key>
 	<string></string>
 	<key>columnCount</key>
-	<integer>181</integer>
+	<integer>132</integer>
 	<key>name</key>
 	<string>Basic</string>
 	<key>rowCount</key>
-	<integer>42</integer>
+	<integer>38</integer>
 	<key>shellExitAction</key>
 	<integer>0</integer>
 	<key>type</key>
