@@ -1,3 +1,5 @@
+source `brew --prefix`/etc/bash_completion.d/npm
+source `brew --prefix`/etc/bash_completion.d/git-completion.bash
 shopt -s extglob nullglob dotglob globstar
 shopt -s cmdhist histappend cdspell
 alias ls='ls -Gh'
