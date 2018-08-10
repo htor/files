@@ -8,6 +8,9 @@ alias la='ll -a'
 alias grep='grep --colour=auto'
 alias scp='scp -p'
 alias su='sudo su -l'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
 EDITOR="vim"
 PATH=".:$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
 PS1='\w \$ '
