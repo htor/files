@@ -1,0 +1,6 @@
+#!/bin/bash
+
+ffmpeg -y -i "$1" -ab 320k -map_metadata 0 -id3v2_version 3 \
+           -metadata artist='htor' \
+           -metadata title="${1%%.wav}" \
+           "${1%%.wav}.mp3" 
