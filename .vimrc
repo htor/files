@@ -1,5 +1,6 @@
 syntax on
 filetype indent on
+execute pathogen#infect()
 set nocompatible
 set clipboard=unnamed
 set background=light
@@ -7,9 +8,9 @@ set showcmd
 set shortmess=AITstW
 set nojoinspaces
 set backspace=2
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set expandtab
 set autoindent
 set ignorecase
@@ -29,9 +30,12 @@ let g:netrw_liststyle=3
 let mapleader=","
 nnoremap <Tab> <C-w>w
 nnoremap <Leader><Leader> <C-^>
+nnoremap <Leader>. :ALEFix standard<CR>
 noremap <C-c> :s:^:\/\/<CR>
 noremap <C-d> :s:^\/\/<CR>
 nnoremap Q <Nop>
 command W w
 command Wq wq
 command Q q
+command QA qa
+hi CursorLine cterm=bold
