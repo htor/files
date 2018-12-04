@@ -25,9 +25,13 @@ set wildignore=node_modules/**,.git/**,package-lock*
 set listchars=tab:>>,extends:#,nbsp:@
 set list
 set ruler
+set mouse=a
+set number
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 let mapleader=","
+let g:ale_linters = { 'javascript': ['standard'] }
+let g:ale_linters_explicit = 1
 nnoremap <Tab> <C-w>w
 nnoremap <Leader><Leader> <C-^>
 nnoremap <Leader>. :ALEFix standard<CR>
