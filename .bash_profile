@@ -12,10 +12,10 @@ alias vi='vim'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'; }
+branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ \(\1\)/'; }
 EDITOR="vim"
 PATH=".:$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
-PS1='\w\e[1;32m$(branch)\e[0m \$ '
+PS1='\w$(branch) \$ '
 HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
 HISTFILESIZE=100000
