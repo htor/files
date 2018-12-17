@@ -1,11 +1,9 @@
-[push]
-	default = simple
 [user]
 	name = Herman Torjussen
-	email = herman.torjussen@gmail.com
+	email = herman.torjussen@gmail.no
 [alias]
 	ch = checkout
 	br = branch
-	st = status
+	st = status -s
 	co = commit
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
