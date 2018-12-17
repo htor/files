@@ -3,3 +3,9 @@
 [user]
 	name = Herman Torjussen
 	email = herman.torjussen@gmail.com
+[alias]
+	ch = checkout
+	br = branch
+	st = status
+	co = commit
+	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
