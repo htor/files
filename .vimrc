@@ -35,6 +35,7 @@ let g:ale_linters = { 'javascript': ['standard'] }
 let g:ale_linters_explicit = 1
 let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:auto_save = 1
+let g:auto_save_silent = 1
 nnoremap <Tab> <C-w>w
 nnoremap <Leader><Leader> <C-^>
 nnoremap <Leader>f :ALEFix standard<CR>

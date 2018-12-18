@@ -1,6 +1,8 @@
+[push]
+	default = simple
 [user]
 	name = Herman Torjussen
-	email = herman.torjussen@gmail.no
+	email = herman.torjussen@gmail.com
 [alias]
 	ch = checkout
 	br = branch
