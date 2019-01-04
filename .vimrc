@@ -1,5 +1,5 @@
 "ale ctrlp.vim delimitMate emmet-vim tcomment_vim vim-auto-save 
-"vim-css-color vim-es6 vim-multiple-cursors vim-surround
+"vim-css-color vim-es6 vim-multiple-cursors vim-surround vim-stylus
 syntax on
 filetype indent on
 execute pathogen#infect()
@@ -45,4 +45,5 @@ command W w
 command Wq wq
 command Q q
 command QA qa
+command E e
 hi CursorLine cterm=bold
