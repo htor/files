@@ -37,6 +37,7 @@ let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 let g:auto_save = 1
 let g:auto_save_silent = 1
 nnoremap <Tab> <C-w>w
+nnoremap <S-Tab> <C-w>W
 nnoremap <Leader><Leader> <C-^>
 nnoremap <Leader>f :ALEFix standard<CR>
 noremap <Leader>c :TComment<CR>

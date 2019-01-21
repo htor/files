@@ -9,3 +9,4 @@
 	st = status -s
 	co = commit
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
+	df = diff -- ':!**/*package-lock.json'
