@@ -5,7 +5,7 @@ shopt -s cmdhist histappend cdspell
 alias ls='ls -Gh'
 alias ll='ls -l'
 alias la='ll -a'
-alias grep='grep --colour=auto'
+alias grep='grep --colour=auto --exclude-dir=node_modules'
 alias scp='scp -p'
 alias su='sudo su -l'
 alias vi='vim'
