@@ -16,7 +16,7 @@ function start () {
   const maxFiles = args[1] || 25
   const maxDepth = args[2] || 4
   const playlist = makeTempFile(`ram-${Date.now()}.m3u8`)
-  let files = shuffle(find(targetDir, { maxDepth, maxFiles })).slice(0, maxFiles)
+  let files = shuffle(find(targetDir, maxDepth)).slice(0, maxFiles)
   files = files.map((file) => {
     file = file.replace(/''/g, '"')
     return `#EXTINF:-1,${path.basename(file)}\nfile://${encodeURIComponent(file)}`
@@ -30,7 +30,7 @@ function start () {
   })
 }
 
-function find (dir, opts = {}) {
+function find (dir, maxDepth) {
   function findRecursive (filePath, depth) {
     if (depth === 0) return []
     const dir = fs.readdirSync(filePath).map((file) => path.resolve(filePath, file))
@@ -41,7 +41,7 @@ function find (dir, opts = {}) {
       .reduce((acc, all) => acc.concat(all), audioFiles)
     return result
   }
-  return findRecursive(dir, opts.depth || 3)
+  return findRecursive(dir, maxDepth)
 }
 
 function shuffle (array) {
