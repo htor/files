@@ -18,8 +18,10 @@ function start () {
   const playlist = makeTempFile(`ram-${Date.now()}.m3u8`)
   let files = shuffle(find(targetDir, maxDepth)).slice(0, maxFiles)
   files = files.map((file) => {
-    file = file.replace(/''/g, '"')
-    return `#EXTINF:-1,${path.basename(file)}\nfile://${encodeURIComponent(file)}`
+    let filePath = file
+    if (process.platform !== 'win32')
+      filePath = `file:///${encodeURIComponent(file)}`
+    return `#EXTINF:-1,${path.basename(file)}\n${filePath}`
   }).join('\n')
   fs.writeFileSync(playlist, `#EXTM3U\n${files}`)
   exec(`open ${playlist}`)  // mac
