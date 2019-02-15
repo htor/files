@@ -1,0 +1,11 @@
+'.platform-darwin':
+  'cmd-shift-space': 'tree-view:toggle'
+
+'.platform-darwin atom-text-editor:not([mini])':
+  'cmd-\'': 'unset!'
+
+'.editor':
+  'cmd-shift-k': 'editor:toggle-line-comments'
+
+'atom-text-editor':
+  'cmd-shift-g': 'standard-formatter:format'
