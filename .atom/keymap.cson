@@ -8,4 +8,4 @@
   'cmd-shift-k': 'editor:toggle-line-comments'
 
 'atom-text-editor':
-  'cmd-shift-g': 'standard-formatter:format'
+  'cmd-shift-i': 'editor:auto-indent'
