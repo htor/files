@@ -16,13 +16,15 @@ function start () {
   const maxFiles = args[1] || 25
   const maxDepth = args[2] || 4
   const playlist = makeTempFile(`ram-${Date.now()}.m3u8`)
-  let files = shuffle(find(targetDir, maxDepth)).slice(0, maxFiles)
-  files = files.map((file) => {
-    let filePath = file
-    if (process.platform !== 'win32')
-      filePath = `file:///${encodeURIComponent(file)}`
-    return `#EXTINF:-1,${path.basename(file)}\n${filePath}`
-  }).join('\n')
+  const files = shuffle(find(targetDir, maxDepth))
+    .slice(0, maxFiles)
+    .filter((file) => !path.basename(file).startsWith('.'))
+    .map((file) => {
+      let filePath = file
+      if (process.platform !== 'win32')
+        filePath = `file:///${encodeURIComponent(file)}`
+      return `#EXTINF:-1,${path.basename(file)}\n${filePath}`
+    }).join('\n')
   fs.writeFileSync(playlist, `#EXTM3U\n${files}`)
   exec(`open ${playlist}`)  // mac
   .catch((err) => exec(`start ${playlist}`)) // win
