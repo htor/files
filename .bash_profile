@@ -14,6 +14,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ @\1/'; }
 music() { command music ${@:-/Volumes/space/music}; }
+eject() { diskutil eject $@; }
 EDITOR="vim"
 PATH=".:$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
 PS1='\w\e[1;34m$(branch)\e(b\e[m \$ '
