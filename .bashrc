@@ -1,5 +1,4 @@
-source `brew --prefix`/etc/bash_completion.d/npm
-source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+source /etc/bash_completion
 shopt -s extglob nullglob dotglob globstar
 shopt -s cmdhist histappend cdspell
 alias ls='ls -Gh'
@@ -9,14 +8,13 @@ alias grep='grep --colour=auto'
 alias scp='scp -p'
 alias su='sudo su -l'
 alias vi='vim'
+alias c='cd /mnt/c/users/htor'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ @\1/'; }
-music() { command music ${@:-/Volumes/space/music}; }
-eject() { diskutil eject $@; }
 EDITOR="vim"
-PATH=".:$PATH:$HOME/.bin:/usr/local/opt/coreutils/libexec/gnubin"
+PATH=".:$PATH:$HOME/.bin:$HOME/.npm-global/bin"
 PS1='\w\[\e[1;34m\]$(branch)\[\e[m\] \$ '
 HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
