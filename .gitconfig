@@ -10,3 +10,4 @@
 	co = commit
 	hist = log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short
 	df = diff -- ':!package-lock.json'
+	clean-branches = ! git branch | grep -v ' master$' | xargs git branch -D
