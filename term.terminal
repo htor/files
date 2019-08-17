@@ -189,14 +189,22 @@
 	AAAZAAAAAAAAAAAAAAAAAAAA2Q==
 	</data>
 	<key>ShowActiveProcessArgumentsInTabTitle</key>
-	<false/>
+	<true/>
+	<key>ShowActiveProcessArgumentsInTitle</key>
+	<true/>
 	<key>ShowActiveProcessInTabTitle</key>
 	<true/>
 	<key>ShowComponentsWhenTabHasCustomTitle</key>
 	<false/>
 	<key>ShowDimensionsInTitle</key>
 	<false/>
+	<key>ShowRepresentedURLInTabTitle</key>
+	<false/>
 	<key>ShowRepresentedURLInTitle</key>
+	<false/>
+	<key>ShowRepresentedURLPathInTabTitle</key>
+	<true/>
+	<key>ShowShellCommandInTitle</key>
 	<false/>
 	<key>ShowTTYNameInTabTitle</key>
 	<false/>
@@ -225,11 +233,11 @@
 	<key>WindowTitle</key>
 	<string></string>
 	<key>columnCount</key>
-	<integer>160</integer>
+	<integer>158</integer>
 	<key>name</key>
 	<string>term</string>
 	<key>rowCount</key>
-	<integer>50</integer>
+	<integer>41</integer>
 	<key>shellExitAction</key>
 	<integer>0</integer>
 	<key>type</key>
