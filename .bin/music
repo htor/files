@@ -39,7 +39,7 @@ function find (dir, maxDepth) {
     if (depth === 0) return []
     const dir = fs.readdirSync(filePath).map((file) => path.resolve(filePath, file))
     const audioFiles = dir.filter((file) => file.match(/.*[^.]+\.(flac|mp3|ogg|wav|aiff?)$/i))
-    const directories = dir.filter((file) => fs.statSync(file).isDirectory())
+    const directories = dir.filter((file) => fs.lstatSync(file).isDirectory())
     const result = directories
       .map((dir) => findRecursive(dir, depth - 1))
       .reduce((acc, all) => acc.concat(all), audioFiles)
