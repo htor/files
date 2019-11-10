@@ -1,4 +1,4 @@
--- copies all tracks from the playlist "trax" in swinsian to a directory
+-- syncs all tracks from the playlist "trax" in swinsian to a directory
 
 set thelist to "trax"
 set thedest to "/Volumes/space/Trax/"
