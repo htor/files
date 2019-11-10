@@ -5,7 +5,7 @@ shopt -s cmdhist histappend cdspell
 alias ls='ls -Gh'
 alias ll='ls -l'
 alias la='ll -a'
-alias grep='grep --colour=auto --exclude-dir=node_modules'
+alias grep='grep --colour=auto'
 alias swins2trax='osascript ~/.bin/swins2trax.applescript'
 alias su='sudo su -l'
 alias vi='vim'
