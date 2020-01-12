@@ -16,10 +16,21 @@ tell application "Swinsian"
 		set thelistname to name of theplaylist as string
 		if thelistname is equal to thelist then
 			do shell script "rm -rf " & thedesttmp
-			do shell script "mkdir " & thedesttmp
-			repeat with thetrack in tracks of theplaylist
+			do shell script "mkdir -p " & thedesttmp
+			set thetracks to tracks of theplaylist
+			repeat with i from 1 to (count thetracks)
+				set thetrack to item i of thetracks
 				set thefile to location of thetrack
-				do shell script "cp -a \"" & thefile & "\" " & thedesttmp
+				set thefileexists to true
+				try
+					do shell script "([ -f \"" & thefile & "\" ]); exit $?"
+				on error
+					remove tracks (thetrack) from theplaylist
+					set thefileexists to false
+				end try
+				if thefileexists then
+					do shell script "cp -a \"" & thefile & "\" " & thedesttmp
+				end if
 			end repeat
 			do shell script "rsync -auvv --delete " & thedesttmp & " " & thedest
 			do shell script "rm -rf " & thedesttmp
