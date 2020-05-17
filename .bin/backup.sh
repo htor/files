@@ -3,18 +3,10 @@
 
 set -e
 
-files=(
-~/.bin
-~/.ssh
-~/.bash_profile
-~/.vimrc 
-~/.inputrc
-~/.gitconfig
-)
-backupdir=~/space/backups
-if [[ -d $backupdir ]]
+if [[ -d /Volumes/space2 ]]
 then
-    rsync -auvv --delete --exclude={.git,node_modules} "${files[@]}" $backupdir
+    time rsync -auvv --delete --exclude={Films,.*} /Volumes/space/ /Volumes/space2
+    say "backup done"
 else
-    echo "backup directory not mounted, doing nothing"
+    echo "Disk space2 not mounted, doing nothing"
 fi
