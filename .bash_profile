@@ -12,6 +12,7 @@ alias vi='vim'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
+rm() { mv -f "$@" ~/.Trash; }
 branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ @\1/'; }
 music() { music.sh ${@:-/Volumes/space/music}; }
 eject() { diskutil eject $@; }
