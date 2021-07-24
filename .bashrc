@@ -14,9 +14,10 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 branch() { git branch 2>/dev/null| sed -e '/^[^*]/d' -e 's/* \(.*\)/ @\1/'; }
 wavify() { ffmpeg -i "$1" "${1%.*}".wav; }
-EDITOR="vim"
-PATH=".:$PATH:$HOME/.bin:$HOME/.npm-global/bin"
-PS1='\w\[\e[1;34m\]$(branch)\[\e[m\] \$ '
-HISTCONTROL=ignoredups:erasedups
-HISTSIZE=100000
-HISTFILESIZE=100000
+export EDITOR="vim"
+export PATH=".:$PATH:$HOME/.bin:$HOME/.npm-global/bin"
+export PS1='\w\[\e[1;34m\]$(branch)\[\e[m\] \$ '
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=100000
+export HISTFILESIZE=100000
+export WWW_HOME="ddg.gg"
