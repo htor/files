@@ -1,5 +1,4 @@
-source `brew --prefix`/etc/bash_completion.d/npm
-source `brew --prefix`/etc/bash_completion.d/git-completion.bash
+eval "$(/opt/homebrew/bin/brew shellenv)"
 shopt -s extglob nullglob dotglob globstar
 shopt -s cmdhist histappend cdspell
 alias ls='ls -h'
@@ -19,7 +18,7 @@ eject() { diskutil eject $@; }
 wavify() { ffmpeg -i "$1" "${1%.*}".wav; }
 repeat() { cd ~/Programming/repeat-editor; npm start; }
 EDITOR="vim"
-PATH="/Applications/SuperCollider/SuperCollider.app/Contents/MacOS/:$PATH:$HOME/.bin:."
+PATH="$PATH:$HOME/.bin:."
 PS1='\w\[\e[1;34m\]$(branch)\[\e[m\] \$ '
 HISTCONTROL=ignoredups:erasedups
 HISTSIZE=100000
