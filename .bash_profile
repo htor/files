@@ -1,7 +1,7 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
 shopt -s extglob nullglob dotglob globstar
 shopt -s cmdhist histappend cdspell
-alias ls='ls -h'
+alias ls='ls -h --color=always'
 alias ll='ls -l'
 alias la='ll -a'
 alias grep='grep --colour=auto'
