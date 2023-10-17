@@ -9,7 +9,7 @@ const exec = util.promisify(require('child_process').exec)
 function start () {
   const args = process.argv.slice(2)
   if (args.length === 0 || args.length > 3) {
-    console.log('usage: music <directory> <max-files:25> <max-depth:4>')
+    console.log('usage: randmusic <directory> <max-files:25> <max-depth:4>')
     process.exit(1)
   }
   const targetDir = args[0]

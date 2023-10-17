@@ -7,5 +7,5 @@ radio_channels=(
   http://ice1.somafm.com/cliqhop-128-mp3
 )
 
-vlc ${radio_channels[$RANDOM % ${#radio_channels[@]}]}
+open -na vlc ${radio_channels[$RANDOM % ${#radio_channels[@]}]}
 
