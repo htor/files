@@ -8,15 +8,19 @@ alias la='ll -a'
 alias grep='grep --colour=auto'
 alias su='sudo su -l'
 alias vi='vim'
-alias icloud='cd ~/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias tv='ssh arbium ./Programming/ubuvid/ubuvid.mjs'
+alias repeat='cd ~/Programming/repeat-editor && npm start'
+alias ffmpeg='ffmpeg -hide_banner'
+alias ffprobe='ffprobe -hide_banner'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
-rm() { mv -f "$@" ~/.Trash; }
-ws() { open -na "WebStorm.app" --args "$@"; }
+ws() { open -na WebStorm.app --args "$@"; }
+vlc() { open -na VLC.app --args "$@"; }
+nvm() { brew unlink node && brew link --overwrite node@"$@"; }
 export EDITOR="vim"
 export PATH="$PATH:$HOME/.bin:."
-export PS1='\w\[\e[1;34m\]$(__git_ps1 " @%s")\[\e[m\] \$ '
+export PS1='\w\[\e[1;35m\]$(__git_ps1 " @%s") \[\e[1;32m\]\$\[\e[m\] '
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
