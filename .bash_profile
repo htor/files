@@ -8,13 +8,10 @@ alias la='ll -a'
 alias grep='grep --colour=auto'
 alias su='sudo su -l'
 alias vi='vim'
-alias ubutv='~/Programming/ubutv/ubutv.sh'
-alias repeat='cd ~/Programming/repeat-editor && npm start'
+alias ubutv='~/icloud/Programming/ubutv/ubutv.mjs'
+alias repeat='cd ~/icloud/Programming/repeat-editor && npm start'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
 ws() { open -na WebStorm.app --args "$@"; }
 vlc() { open -na VLC.app --args "$@"; }
 nvm() { brew unlink node && brew link --overwrite node@"$@"; }
