@@ -1,7 +1,0 @@
-'atom-text-editor':
-  'cmd-\'': 'unset!'
-  'cmd-shift-i': 'editor:auto-indent'
-  'cmd-shift-m': 'markdown-preview:toggle'
-  'cmd-shift-k': 'editor:toggle-line-comments'
-  'cmd-shift-space': 'tree-view:toggle'
-  'cmd-shift-g': 'github:toggle-git-tab'

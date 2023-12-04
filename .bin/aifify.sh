@@ -4,7 +4,7 @@ set -e
 
 if test $# != 1
 then
-    echo "usage: aifify [file|dir]"
+    echo "usage: aifify.sh [file|dir]"
     exit 1
 fi
 
