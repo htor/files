@@ -9,7 +9,7 @@ alias grep='grep --colour=auto'
 alias su='sudo su -l'
 alias vi='vim'
 alias ubutv='~/icloud/Programming/ubutv/ubutv.mjs'
-alias repeat='cd ~/icloud/Programming/repeat-editor && npm start'
+alias framing='cd ~/icloud/Programming/framing && npm run dev'
 alias ffmpeg='ffmpeg -hide_banner'
 alias ffprobe='ffprobe -hide_banner'
 ws() { open -na WebStorm.app --args "$@"; }
