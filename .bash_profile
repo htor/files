@@ -15,6 +15,10 @@ alias ffprobe='ffprobe -hide_banner'
 ws() { open -na WebStorm.app --args "$@"; }
 vlc() { open -na VLC.app --args "$@"; }
 nvm() { brew unlink node && brew link --overwrite node@"$@"; }
+lufs() {
+  ffmpeg -i "$@" -af ebur128=framelog=verbose -f null - 2>&1 | \
+    awk '/I:/{print $2}'
+}
 export EDITOR="vim"
 export PATH="$PATH:$HOME/icloud/Programming/unix-files/.bin:."
 export PS1='\w\[\e[1;35m\]$(__git_ps1 " @%s") \[\e[1;32m\]\$\[\e[m\] '
