@@ -1,4 +1,5 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
+source ~/.ghcup/env
 source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
 shopt -s extglob nullglob dotglob globstar
 shopt -s cmdhist histappend cdspell
@@ -15,13 +16,14 @@ alias ffprobe='ffprobe -hide_banner'
 ws() { open -na WebStorm.app --args "$@"; }
 vlc() { open -na VLC.app --args "$@"; }
 nvm() { brew unlink node && brew link --overwrite node@"$@"; }
+cwd() { echo ${PWD/\Library\/Mobile Documents\/com~apple~CloudDocs/icloud}; }
 lufs() {
   ffmpeg -i "$@" -af ebur128=framelog=verbose -f null - 2>&1 | \
     awk '/I:/{print $2}'
 }
-export EDITOR="vim"
+export EDITOR="zed -w"
 export PATH="$PATH:$HOME/icloud/Programming/unix-files/.bin:."
-export PS1='\w\[\e[1;35m\]$(__git_ps1 " @%s") \[\e[1;32m\]\$\[\e[m\] '
+export PS1='$(cwd)\[\e[1;35m\]$(__git_ps1 " @%s") \[\e[1;32m\]\$\[\e[m\] '
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
 export HISTFILESIZE=100000
