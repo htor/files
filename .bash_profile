@@ -16,7 +16,10 @@ alias ffprobe='ffprobe -hide_banner'
 ws() { open -na WebStorm.app --args "$@"; }
 vlc() { open -na VLC.app --args "$@"; }
 nvm() { brew unlink node && brew link --overwrite node@"$@"; }
-cwd() { echo ${PWD/\Library\/Mobile Documents\/com~apple~CloudDocs/icloud}; }
+cwd() {
+    cwd=${PWD/\/Users\/htor/\~}
+    echo ${cwd/\Library\/Mobile Documents\/com~apple~CloudDocs/icloud}
+}
 lufs() {
   ffmpeg -i "$@" -af ebur128=framelog=verbose -f null - 2>&1 | \
     awk '/I:/{print $2}'

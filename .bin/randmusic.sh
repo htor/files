@@ -10,15 +10,15 @@ mv $playlist $playlist.m3u
 playlist=$playlist.m3u
 
 case $# in
-    0) 
+    0)
         if [[ ! -d $target_directory ]]
         then
             echo "default directory $target_directory not mounted, doing nothing"
             exit 1
         fi ;;
-    1)  
+    1)
         target_directory=$1 ;;
-    2)  
+    2)
         target_directory=$1
         num_tracks=$2 ;;
     *)
@@ -31,7 +31,7 @@ find -E $target_directory -maxdepth 3 -type f \
     -iregex '.*/[^.]+\.(flac|mp3|ogg|wav|aiff?)$' | \
     shuf -n $num_tracks | \
     while read file
-    do 
+    do
         echo "#EXTINF:0,$(basename "$file")" >> $playlist
         echo "$file" >> $playlist
     done
