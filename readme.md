@@ -1,3 +1,3 @@
-# unix-files
+# files
 
-unix files that are useful on mac and linux
+files that are useful
