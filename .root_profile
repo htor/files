@@ -1,0 +1,15 @@
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
+shopt -s extglob nullglob dotglob globstar
+shopt -s cmdhist histappend cdspell
+alias ls='ls -hGF'
+alias ll='ls -l'
+alias la='ll -a'
+alias grep='grep --colour=auto'
+alias su='sudo su -l'
+alias vi='vim'
+export EDITOR="zed -w"
+export PS1='\w \[\e[1;31m\]\$\[\e[0m\] '
+export HISTCONTROL=ignoredups:erasedups
+export HISTSIZE=100000
+export HISTFILESIZE=100000
