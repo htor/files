@@ -25,7 +25,7 @@ lufs() {
     awk '/I:/{print $2}'
 }
 export EDITOR="zed -w"
-export PATH="$PATH:$HOME/icloud/Programming/unix-files/.bin:."
+export PATH="$PATH:$HOME/icloud/Programming/files/.bin:."
 export PS1='$(cwd)\[\e[1;35m\]$(__git_ps1 " @%s") \[\e[1;32m\]\$\[\e[m\] '
 export HISTCONTROL=ignoredups:erasedups
 export HISTSIZE=100000
