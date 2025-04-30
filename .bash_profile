@@ -27,8 +27,8 @@ lufs() {
   ffmpeg -i "$@" -af ebur128=framelog=verbose -f null - 2>&1 | \
     awk '/I:/{print $2}'
 }
-export EDITOR="zed -w"
-export PATH="$PATH:~/.bin:~/.deno/bin:."
+export EDITOR="vi"
+export PATH="$PATH:~/.bin:."
 export PS1='$(cwd) \[\e[1;32m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='printf "\e]1;%s\a" "$USER@$(hostname)"'
 export HISTCONTROL=ignoredups:erasedups
