@@ -1,5 +1,4 @@
 eval "$(/opt/homebrew/bin/brew shellenv)"
-source ~/.ghcup/env
 source /opt/homebrew/etc/bash_completion.d/git-prompt.sh
 complete -cf sudo
 shopt -s extglob nullglob dotglob globstar
@@ -20,7 +19,7 @@ ws() { open -na WebStorm.app --args "$@"; }
 vlc() { open -na VLC.app --args "$@"; }
 nvm() { brew unlink node && brew link --overwrite node@"$@"; }
 cwd() {
-    cwd=${PWD/\/Users\/htor/\~}
+    cwd=${PWD/\/Users\/herman/\~}
     echo ${cwd/\Library\/Mobile Documents\/com~apple~CloudDocs/icloud}
 }
 lufs() {
@@ -28,7 +27,7 @@ lufs() {
     awk '/I:/{print $2}'
 }
 export EDITOR="zed -w"
-export PATH="$PATH:~/.bin:~/.deno/bin:."
+export PATH="$PATH:~/.bin:~/icloud/coding/files/.bin:."
 export PS1='$(cwd) \[\e[1;32m\]\$\[\e[0m\] '
 export PROMPT_COMMAND='printf "\e]1;%s\a" "$USER@$(hostname)"'
 export HISTCONTROL=ignoredups:erasedups
